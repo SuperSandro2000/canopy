@@ -22,10 +22,10 @@ require_relative 'util'
 puts '===== Welcome to Canopy! ====='.red
 
 ## Projects config
-Projects = { 
+Projects = {
   'googletest' => { 'url' => 'https://github.com/google/googletest', 'version' => '1.0.0', 'outputs' => ['gtest.lib', 'gtest_main.lib'] }, \
   'dummy' => { 'url' => 'https://github.com/google/googletest', 'version': '1.0.0', 'outputs' => ['gtest.lib'] }, \
-  'dummy2' => { 'url' => 'https://github.com/google/googletest', 'version' => '1.0.0', 'outputs' => ['gtest_main.lib'] } 
+  'dummy2' => { 'url' => 'https://github.com/google/googletest', 'version' => '1.0.0', 'outputs' => ['gtest_main.lib'] }
 }
 
 ## build tools config
