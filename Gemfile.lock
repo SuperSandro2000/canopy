@@ -1,17 +1,46 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    rake (12.3.1)
+    activesupport (4.2.1)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    concurrent-ruby (1.0.5)
+    gemspec (0.3.1)
+      activesupport (= 4.2.1)
+      memoist (= 0.12.0)
+      rake (~> 10.4)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
+    json (1.8.6)
+    memoist (0.12.0)
+    minitest (5.11.3)
+    minitest-filesystem (1.2.0)
+    minitest-profile (0.0.2)
+    minitest-rg (5.2.0)
+      minitest (~> 5.0)
+    rake (10.5.0)
+    rdoc (6.0.2)
     term-ansicolor (1.6.0)
       tins (~> 1.0)
+    thread_safe (0.3.6)
     tins (1.16.3)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
   x64-mingw32
 
 DEPENDENCIES
-  rake
+  gemspec (~> 0.3.1)
+  minitest-filesystem (~> 1.2)
+  minitest-profile (~> 0.0.2)
+  minitest-rg (~> 5.2)
+  rake (~> 10.5)
+  rdoc (~> 6.0)
   term-ansicolor (~> 1.6)
 
 BUNDLED WITH
