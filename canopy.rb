@@ -22,9 +22,11 @@ require_relative 'util'
 puts '===== Welcome to Canopy! ====='.red
 
 ## Projects config
-Projects = { 'googletest' => { 'url' => 'https://github.com/google/googletest', 'version' => '1.0.0', 'outputs' => ['gtest.lib', 'gtest_main.lib'] }, \
-             'dummy' => { 'url' => 'https://github.com/google/googletest', 'version': '1.0.0', 'outputs' => ['gtest.lib'] }, \
-             'dummy2' => { 'url' => 'https://github.com/google/googletest', 'version' => '1.0.0', 'outputs' => ['gtest_main.lib'] } }
+Projects = { 
+  'googletest' => { 'url' => 'https://github.com/google/googletest', 'version' => '1.0.0', 'outputs' => ['gtest.lib', 'gtest_main.lib'] }, \
+  'dummy' => { 'url' => 'https://github.com/google/googletest', 'version': '1.0.0', 'outputs' => ['gtest.lib'] }, \
+  'dummy2' => { 'url' => 'https://github.com/google/googletest', 'version' => '1.0.0', 'outputs' => ['gtest_main.lib'] } 
+}
 
 ## build tools config
 ENV['vcvars'] ||= '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"'
