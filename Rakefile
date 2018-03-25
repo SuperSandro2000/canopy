@@ -27,7 +27,7 @@ end
 
 # TODO remove later
 RDoc::Task.new do |rdoc|
-  rdoc.title  = 'Canuby'
+  rdoc.title = 'Canuby'
   rdoc.main = "README.md"
   rdoc.rdoc_files = FileList.new %w[lib LICENSE README.md]
   rdoc.rdoc_dir = 'docs'
