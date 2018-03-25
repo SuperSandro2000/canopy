@@ -31,7 +31,7 @@ class CanubyTest < Minitest::Test
   @@rel_type = 'RelWithDebInfo'
   @@project = 'Test'
   Object.const_set(@@project, Project.new)
-  Object.const_get(@@project).url= 'https://github.com/SuperSandro2000/canuby-cmake-test'
+  Object.const_get(@@project).url = 'https://github.com/SuperSandro2000/canuby-cmake-test'
   Object.const_get(@@project).version = '1.7.10'
   Object.const_get(@@project).path = File.join(Paths.base_dir(true), @@project)
   Object.const_get(@@project).outputs = ['math.lib']
@@ -50,10 +50,10 @@ class CanubyTest < Minitest::Test
 
   def test_logger
 
-    assert_output(/\[#{timestamp_regex}\] DEBUG \(\): This is an debug log...\n/){ logger.debug("This is an debug log...") }
-    assert_output(/\[#{timestamp_regex}\] INFO  \(\): This is an info log...\n/){ logger.info("This is an info log...") }
-    assert_output(/\[#{timestamp_regex}\] WARN  \(\): This is an warn log...\n/){ logger.warn("This is an warn log...") }
-    assert_output(/\[#{timestamp_regex}\] ERROR \(\): This is an error log...\n/){ logger.error("This is an error log...") }
+    assert_output(/\[#{timestamp_regex}\] DEBUG \(\): This is an debug log...\n/) { logger.debug("This is an debug log...") }
+    assert_output(/\[#{timestamp_regex}\] INFO  \(\): This is an info log...\n/) { logger.info("This is an info log...") }
+    assert_output(/\[#{timestamp_regex}\] WARN  \(\): This is an warn log...\n/) { logger.warn("This is an warn log...") }
+    assert_output(/\[#{timestamp_regex}\] ERROR \(\): This is an error log...\n/) { logger.error("This is an error log...") }
   end
 
   def test_paths
