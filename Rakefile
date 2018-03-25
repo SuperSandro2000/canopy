@@ -26,7 +26,7 @@ Rake::TestTask.new do |t|
 end
 
 RDoc::Task.new do |doc|
-  doc.title  = 'Canuby'
+  doc.title = 'Canuby'
   #doc.rdoc_files = FileList.new %w[lib LICENSE README]
   rdoc.markup = 'markdown'
   doc.rdoc_dir = 'doc'
