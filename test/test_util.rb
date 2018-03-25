@@ -49,7 +49,6 @@ class CanubyTest < Minitest::Test
   end
 
   def test_logger
-
     assert_output(/\[#{timestamp_regex}\] DEBUG \(\): This is an debug log...\n/){ logger.debug("This is an debug log...") }
     assert_output(/\[#{timestamp_regex}\] INFO  \(\): This is an info log...\n/){ logger.info("This is an info log...") }
     assert_output(/\[#{timestamp_regex}\] WARN  \(\): This is an warn log...\n/){ logger.warn("This is an warn log...") }
