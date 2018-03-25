@@ -123,7 +123,7 @@ module Build
     build_dir = Paths.build_dir(project)
     mkdir_p build_dir unless Dir.exist?(build_dir)
     Dir.chdir(build_dir) do
-      system( 'cmake ..')
+      system('cmake ..')
       system("#{ENV['vcvars']} && msbuild #{project_file}.sln /p:Configuration=#{ENV['rel_type']} /p:Platform=Win32 /v:m")
     end
   end
@@ -136,7 +136,7 @@ module Stage
 
   def self.collect(project)
     puts "Staging #{project}..."
-    const_get(project).outputs.map { |f| cp File.join(const_get(project).output_dir, ENV['reL_type'], f), stage_dir}
+    const_get(project).outputs.map { |f| cp File.join(const_get(project).output_dir, ENV['reL_type'], f), stage_dir }
   end
 end
 
