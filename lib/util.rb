@@ -57,17 +57,19 @@ module Logging
   def self.logger
     @logger = Logger.new($stdout)
 
-    @logger.level = if ENV['CI'] == 'true' || ENV['TEST'] == 'true' || false
-                      Logger::WARN
-                    elsif ENV['DEBUG'] == 'true' || false
-                      Logger::DEBUG
-                    else
-                      Logger::INFO
-                    end
+    @logger.level =
+      if ENV['CI'] == 'true' || ENV['TEST'] == 'true' || false
+        Logger::WARN
+      elsif ENV['DEBUG'] == 'true' || false
+        Logger::DEBUG
+      else
+        Logger::INFO
+      end
 
-    @logger.formatter = proc do |severity, datetime, progname, msg|
-      log(severity, datetime, progname, msg)
-    end
+    @logger.formatter =
+      proc do |severity, datetime, progname, msg|
+        log(severity, datetime, progname, msg)
+      end
     @logger
   end
 end
